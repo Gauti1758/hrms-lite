@@ -1,8 +1,8 @@
 #backend/app/crud/employee.py
 
 from sqlalchemy.orm import Session
-from models.employee import Employee
-from schemas.employee import EmployeeCreate
+from app.models.employee import Employee
+from app.schemas.employee import EmployeeCreate
 
 
 def create_employee(db: Session, employee: EmployeeCreate):

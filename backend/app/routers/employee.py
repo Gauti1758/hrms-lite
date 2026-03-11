@@ -3,9 +3,9 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
 
-from database import get_db
-from schemas.employee import EmployeeCreate, EmployeeResponse, EmployeeUpdate
-from crud import employee as employee_crud
+from app.database import get_db
+from app.schemas.employee import EmployeeCreate, EmployeeResponse, EmployeeUpdate
+from app.crud import employee as employee_crud
 
 router = APIRouter(prefix="/employees", tags=["Employees"])
 

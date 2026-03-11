@@ -5,7 +5,7 @@ from sqlalchemy.sql import func
 from sqlalchemy.types import DateTime
 from sqlalchemy.orm import relationship
 
-from database import Base
+from app.database import Base
 
 
 class Attendance(Base):

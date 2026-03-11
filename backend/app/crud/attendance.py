@@ -1,8 +1,8 @@
 #backend/app/crud/attendance.py
 
 from sqlalchemy.orm import Session
-from models.attendance import Attendance
-from schemas.attendance import AttendanceCreate
+from app.models.attendance import Attendance
+from app.schemas.attendance import AttendanceCreate
 
 
 def mark_attendance(db: Session, attendance: AttendanceCreate):

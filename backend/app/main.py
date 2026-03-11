@@ -1,9 +1,9 @@
 #backend/app/main.py
 from fastapi import FastAPI
-from database import Base, engine
-from models import employee, attendance
-from routers import employee as employee_router
-from routers import attendance as attendance_router
+from app.database import Base, engine
+from app.models import employee, attendance
+from app.routers import employee as employee_router
+from app.routers import attendance as attendance_router
 
 from fastapi.middleware.cors import CORSMiddleware
 

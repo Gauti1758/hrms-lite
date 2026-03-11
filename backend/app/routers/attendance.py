@@ -4,10 +4,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 
-from database import get_db
-from schemas.attendance import AttendanceCreate, AttendanceResponse
-from crud import attendance as attendance_crud
-from models.employee import Employee
+from app.database import get_db
+from app.schemas.attendance import AttendanceCreate, AttendanceResponse
+from app.crud import attendance as attendance_crud
+from app.models.employee import Employee
 
 router = APIRouter(prefix="/attendance", tags=["Attendance"])
 
