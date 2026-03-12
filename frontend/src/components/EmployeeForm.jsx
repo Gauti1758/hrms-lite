@@ -19,17 +19,25 @@ function EmployeeForm({reload}) {
 
   const handleSubmit = async (e)=>{
     e.preventDefault();
-
-    await createEmployee(form);
-
-    reload();
-
-    setForm({
-      employee_id:"",
-      full_name:"",
-      email:"",
-      department:""
-    });
+  
+    try {
+  
+      await createEmployee(form);
+  
+      reload();
+  
+      setForm({
+        employee_id:"",
+        full_name:"",
+        email:"",
+        department:""
+      });
+  
+    } catch (err) {
+  
+      alert(err.message);
+  
+    }
   };
 
   return(

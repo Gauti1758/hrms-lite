@@ -30,16 +30,22 @@ function AttendancePage(){
 
   const handleSubmit = async (e)=>{
     e.preventDefault();
-
-    await markAttendance(form);
-
-    alert("Attendance marked");
-
-    setForm({
-      employee_id:"",
-      date:"",
-      status:"Present"
-    });
+  
+    try {
+      await markAttendance(form);
+      alert("Attendance marked");
+  
+      setForm({
+        employee_id:"",
+        date:"",
+        status:"Present"
+      });
+  
+    } catch (err) {
+  
+      alert(err.message);
+  
+    }
   };
 
   return(
